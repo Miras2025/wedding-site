@@ -35,7 +35,7 @@ document.querySelector('.zayotrp').addEventListener('click', function() {
     }
 
     const answer = selectedOption.value;
-    const message = `🔔 Жаңа қонақ!\n👤 Есімі: ${guestName}\n💬 Жауабы: ${answer}\n\n 📅 <i>Жіберілген уақыты: ${new Date().toLocaleString('kk-KZ')}</i>`;
+    const message = `🔔 Жаңа қонақ!\n👤 Есімі: ${guestName}\n💬 Жауабы: ${answer}\n\n 📅 Жіберілген уақыты: ${new Date().toLocaleString('kk-KZ')}`;
 
     // Сіздің ботыңыздың мәліметтері
     const token = '8668030843:AAHj08Tesh2W1gajMqHYNt8GeLv9sNu3rEU'; 
@@ -72,4 +72,5 @@ musicBtn.addEventListener('click', function() {
         musicBtn.innerHTML = '⏸️ Әуенді өшіру';
     }
     isPlaying = !isPlaying;
+
 });
