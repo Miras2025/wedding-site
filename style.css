@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Great Vibes', cursive; /* Немесе өзіңіздің шрифтіңіз */
     background-color: #fcfaf8;
     color: #413522;
     margin: 0;
@@ -131,7 +131,7 @@ body {
 
 /* Программа */
 .blok-3 h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Great Vibes', cursive; /* Немесе өзіңіздің шрифтіңіз */
     font-size: 32px;
     color: #D7A563;
     margin-bottom: 25px;
@@ -288,3 +288,4 @@ body {
         font-size: 1rem;
     }
 }
+
