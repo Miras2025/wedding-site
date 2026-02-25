@@ -131,13 +131,13 @@ body {
 
 /* Программа */
 .blok-3 h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     color: #D7A563;
     margin-bottom: 25px;
 }
 
 .blok-3 p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     margin: 15px 0;
     padding-bottom: 15px;
@@ -288,4 +288,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
