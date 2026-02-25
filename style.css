@@ -78,13 +78,13 @@ body {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #eadfd4;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
 }
 
 .toiieleri span {
     display: block;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     color: #888;
     margin-bottom: 5px;
@@ -94,6 +94,7 @@ body {
 
 /* Время и место */
 .blok-2, .blok-6 {
+    font-size: 20px;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 30px 20px;
@@ -106,7 +107,7 @@ body {
     font-weight: 600;
     color: #D7A563;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -289,4 +290,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
