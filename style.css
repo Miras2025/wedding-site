@@ -131,7 +131,7 @@ body {
 
 /* Программа */
 .blok-3 h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     color: #D7A563;
     margin-bottom: 25px;
@@ -288,3 +288,4 @@ body {
         font-size: 1rem;
     }
 }
+
