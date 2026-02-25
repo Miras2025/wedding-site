@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Мирас пен Еркеназдың үйлену тойына шақыру</title>
+    </head>
+<body class="d-flex flex-column h-100">
+<div class="music-button" id="musicBtn">
+    🎵 Әуенді қосу
+</div>
+<audio id="bgMusic" loop>
+    <source src="/static/music.mp3" type="audio/mpeg">
+</audio>
+<div class="blok-1 sitecontainer">
+    <div class="mainphoto">
+        <div class="dateandnames">
+            <div class="firstdate">
+                <div>25 Маусым 2026</div>
+            </div>
+            <div class="firstname">Мирас <span>&amp;</span> Еркеназ</div>
+        </div>
+    </div>
+    <div class="mainfirstfon">
+        <div class="maintext">
+            <div class="kurmetti">Құрметті қонақтар!</div>
+            <div class="shaktext">
+                Сіз(дер)ді ұлымыз Мирас пен <br>
+                келініміз Еркеназдың шаңырақ <br>
+                көтеру тойына арналған <br>
+                салтанатты ақ дастарханымыздың <br>
+                қадірлі қонағы болуға шақырамыз.<br>
+            </div>
+            <div class="toiieleri">
+                <span>Той иелері:</span>
+                Алмас – Мейрамгүл            
+            </div>
+        </div>
+    </div>          
+</div>
+
+<div class="blok-2 sitecontainer">
+    <div class="toidate">
+        <div class="toidate2">
+            <span>Тойдың басталу уақыты:</span>
+            25.06.2026 / сағат 18:00        
+        </div>
+    </div>
+    <div class="toiadress">
+        <span>Тойдың мекенжайы:</span>
+        Семей қ., Мажит Бегалин көш., 9 <br>
+        "Салтанат сарайы" мейрамханасы  
+    </div>
+    <a target="_blank" href="https://go.2gis.com/KPYCv" class="twogis">
+        Карта арқылы ашу
+    </a>
+</div>
+
+<div class="blok-3 sitecontainer" style="text-align: center; margin-top: 30px;">
+    <h3>Той бағдарламасы</h3>
+    <p>🥂 18:00 — Қонақтардың жиналуы</p>
+    <p>🪑 18:45 — Залға жайғасу</p>
+    <p>✨ 19:00 — Екі жастың ортаға шығуы және «Беташар»</p>
+    <p>🍽️ 19:45 — Бата және тойдың басталуы</p>
+    <p>💃 21:00 — Алғашқы би</p>
+    <p>🎂 22:30 — Той торты</p>
+    <p>🎇 23:00 — Кештің аяқталуы</p>
+</div>
+
+<div class="blok-4 sitecontainer" style="text-align: center; margin-top: 30px;">
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #D7A563;">Тойға дейін қалды:</h3>
+    <div style="display: flex; justify-content: center; gap: 15px; font-size: 24px; font-weight: bold;">
+        <div><span id="days">00</span><p style="font-size: 12px; font-weight: normal; margin-top: 5px;">Күн</p></div>
+        <div><span>:</span><p></p></div>
+        <div><span id="hours">00</span><p style="font-size: 12px; font-weight: normal; margin-top: 5px;">Сағат</p></div>
+        <div><span>:</span><p></p></div>
+        <div><span id="minutes">00</span><p style="font-size: 12px; font-weight: normal; margin-top: 5px;">Минут</p></div>
+        <div><span>:</span><p></p></div>
+        <div><span id="seconds">00</span><p style="font-size: 12px; font-weight: normal; margin-top: 5px;">Секунд</p></div>
+    </div>
+</div>
+
+<div class="opros">
+        <span style="font-weight: 600; display: block; margin-bottom: 10px;">Есіміңіз кім?</span>
+        <input type="text" id="guestName" placeholder="Аты-жөніңізді жазыңыз" style="width: 100%; box-sizing: border-box; padding: 15px; margin-bottom: 20px; border: 1px solid #eadfd4; border-radius: 10px; font-size: 15px; font-family: inherit;">
+
+        <span style="font-weight: 600; display: block; margin-bottom: 10px;">Бір нұсқаны таңдаңыз:</span>
+        <div class="zayavka">
+            <div class="varian-opros">
+                <input class="custom-radio" type="radio" id="choice1" name="zhauap" value="Иә, жалғыз өзім барамын">
+                <label for="choice1">Иә, жалғыз өзім барамын</label>
+            </div>
+            <div class="varian-opros">
+                <input class="custom-radio" type="radio" id="choice2" name="zhauap" value="Жұбайыммен бірге барамын">
+                <label for="choice2">Жұбайыммен бірге барамын</label>
+            </div>
+            <div class="varian-opros">
+                <input class="custom-radio" type="radio" id="choice3" name="zhauap" value="Өкінішке қарай, келе алмаймын">
+                <label for="choice3">Өкінішке қарай, келе алмаймын</label>
+            </div>
+            <button class="zayotrp">Жауап беру</button>
+        </div>
+    </div>
+<script src="/static/script.js"></script>
+</body>
+</html>
