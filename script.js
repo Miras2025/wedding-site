@@ -63,14 +63,41 @@ const musicBtn = document.getElementById('musicBtn');
 const bgMusic = document.getElementById('bgMusic');
 let isPlaying = false;
 
-musicBtn.addEventListener('click', function() {
-    if (isPlaying) {
-        bgMusic.pause();
-        musicBtn.innerHTML = '🎵 Әуенді қосу';
-    } else {
-        bgMusic.play();
-        musicBtn.innerHTML = '⏸️ Әуенді өшіру';
+// Музыканы қосу функциясы (код қайталанбауы үшін)
+function playMusic() {
+    if (!isPlaying) {
+        bgMusic.play().then(() => {
+            musicBtn.innerHTML = '⏸️ Әуенді өшіру';
+            isPlaying = true;
+        }).catch(error => {
+            console.log("Автоматты түрде қосуға браузер рұқсат бермеді:", error);
+        });
     }
-    isPlaying = !isPlaying;
+}
 
+// Музыканы өшіру функциясы
+function pauseMusic() {
+    bgMusic.pause();
+    musicBtn.innerHTML = '🎵 Әуенді қосу';
+    isPlaying = false;
+}
+
+// 1. Батырманы басқандағы оқиға
+musicBtn.addEventListener('click', function(event) {
+    event.stopPropagation(); // Window-дағы кликпен қақтығыспауы үшін
+    if (isPlaying) {
+        pauseMusic();
+    } else {
+        playMusic();
+    }
 });
+
+// 2. Сайттың кез келген жерін бірінші рет басқанда музыканы қосу
+window.addEventListener('click', function() {
+    playMusic();
+}, { once: true }); // Тек бір рет қана істейді
+
+// 3. Экранды айналдырғанда (scroll) қосылсын десеңіз (кейбір браузерлер үшін пайдалы)
+window.addEventListener('scroll', function() {
+    playMusic();
+}, { once: true });
