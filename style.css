@@ -294,6 +294,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 2px;
     width: 48px;
     height: auto;
     z-index: 1;
@@ -330,6 +331,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
