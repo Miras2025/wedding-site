@@ -23,6 +23,7 @@ setInterval(function() {
 document.querySelector('.zayotrp').addEventListener('click', function() {
     const guestName = document.getElementById('guestName').value;
     const selectedOption = document.querySelector('input[name="zhauap"]:checked');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxLLOVRsCU6cnOWqkY4jpb4gVJLvV_uY9LTMkykQ4RWZEPL_YneYRIIfW0ojzZz_l_9rA/exec'; // Google Web App URL
 
     if (!guestName) {
         alert("Өтініш, есіміңізді жазыңыз.");
@@ -35,6 +36,7 @@ document.querySelector('.zayotrp').addEventListener('click', function() {
     }
 
     const answer = selectedOption.value;
+    const eventType = "🔔 Үйлену тойы"; // Кестеде жаңа бет ашылады
     const message = `🔔 Жаңа қонақ!\n👤 Есімі: ${guestName}\n💬 Жауабы: ${answer}\n\n 📅 Жіберілген уақыты: ${new Date().toLocaleString('kk-KZ')}`;
 
     // Сіздің ботыңыздың мәліметтері
@@ -56,6 +58,16 @@ document.querySelector('.zayotrp').addEventListener('click', function() {
             alert("Қате кетті. Интернет байланысын тексеріңіз.");
         });
 
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors', 
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: guestName, answer: answer, event_type: eventType })
+    })
+    .then(() => {
+        document.getElementById('guestName').value = '';
+    })
+    .catch(error => console.error('Қате!', error.message));
 });
 
 // 3. Музыканы басқару
